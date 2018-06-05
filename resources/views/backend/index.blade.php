@@ -7,6 +7,8 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>Laravel - ReactJS - Nifty 2.*</title>
         <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
+        @includeif('backend.layouts._css_default')
+        @includeif('backend.layouts._css')
         <script type="text/javascript">
             baseUrl = '{{ url("") }}';
             window.Laravel = {!! json_encode([
@@ -14,10 +16,13 @@
                 'csrfToken' => csrf_token(),
             ]) !!};
         </script>
+
     </head>
     <body>
         <div id="example">
         </div>
         <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+        @includeif('backend.layouts._js_default')
+        @includeif('backend.layouts._js')
     </body>
 </html>
