@@ -9,6 +9,10 @@ export default () => {
             <HeaderComponent/>
             <div className="boxed">
                 <MenuComponent />
+                <Switch>
+                    <Route exact path='/react-laravel/user' component={UserContainer} />
+                    <Route path='/react-laravel/login' component={LoginComponent} />
+                </Switch>
             </div>
             <FooterComponent/>
         </div>
