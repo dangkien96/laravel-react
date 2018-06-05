@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('backend.index');
 });
+
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('/users', "RootControler@index")->name('admin.users');
+    Route::get('/categories', "RootControler@index")->name('admin.categories');
+});

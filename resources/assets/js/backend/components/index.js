@@ -6,7 +6,12 @@ import UserComponent from "./Content/UserComponent"
 export default () => {
     return (
         <Router>
-           <UserComponent/>
+            <div>
+                <Switch>
+                    <Route exact path='/laravel-react/admin/users' component={UserComponent} />
+                    <Route exact path='/laravel-react/admin/categories' component={CategoryComponent} />
+                </Switch>
+            </div>
         </Router>
     )
 }

@@ -20,3 +20,4 @@
 <link href="{{ url('Nifty/plugins/switchery/switchery.min.css') }}" rel="stylesheet">
 
 <link href="{{ url('Nifty/plugins/spinkit/css/spinkit.min.css') }}" rel="stylesheet">
+<link href="{{ url('Nifty/plugins/themify-icons/themify-icons.min.css') }}" rel="stylesheet">

@@ -12,8 +12,22 @@
                                 <span class="pull-right dropdown-toggle">
                                     <i class="dropdown-caret"></i>
                                 </span>
-                                <p class="mnp-name">Aaron Chavez</p>
-                                <span class="mnp-desc">aaron.cha@themeon.net</span>
+                                <p class="mnp-name">Đạt óc</p>
+                                <span class="mnp-desc">ocdat@gmail.com</span>
+                            </a>
+                        </div>
+                        <div id="profile-nav" class="collapse list-group bg-trans">
+                            <a href="#" class="list-group-item">
+                                <i class="demo-pli-male icon-lg icon-fw"></i>Thông tin
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <i class="demo-pli-gear icon-lg icon-fw"></i> Cài đặt
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <i class="demo-pli-information icon-lg icon-fw"></i> Giúp
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <i class="demo-pli-unlock icon-lg icon-fw"></i> Đăng Xuất
                             </a>
                         </div>
                     </div>
@@ -55,11 +69,16 @@
                         <!--Category name-->
                         <li class="list-header">Components</li>
                         <!--Menu list item-->
-                        <li>
-                            <a href="#">
-                                <i class="demo-pli-pen-5"></i>
-                                <span class="menu-title">Forms</span>
-                                <i class="arrow"></i>
+                        <li class="{{ request()->is('admin/users') ? 'active-sub active': '' }}">
+                            <a href="{{ route('admin.users') }}">
+                                <i class="demo-pli-male"></i>
+                                <span class="menu-title">Người dùng</span>
+                            </a>
+                        </li>
+                        <li class="{{ request()->is('admin/categories') ? 'active-sub active': '' }}">
+                            <a href="{{ route('admin.categories') }}">
+                                <i class="ti-layers-alt"></i>
+                                <span class="menu-title">Loại sản phẩm</span>
                             </a>
                         </li>
             
