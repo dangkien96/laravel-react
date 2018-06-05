@@ -18,8 +18,8 @@ export default class MenuComponent extends Component {
                                             <span className="pull-right dropdown-toggle">
                                                 <i className="dropdown-caret" />
                                             </span>
-                                            <p className="mnp-name">Aaron Chavez</p>
-                                            <span className="mnp-desc">aaron.cha@themeon.net</span>
+                                            <p className="mnp-name">Đặng Trung Kiên</p>
+                                            <span className="mnp-desc">occhodat@gmail.com</span>
                                         </a>
                                     </div>
                                     <div id="profile-nav" className="collapse list-group bg-trans">
