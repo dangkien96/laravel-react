@@ -4,6 +4,7 @@
     </IfModule>
 
     RewriteEngine On
+    RewriteBase /laravel-react
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
