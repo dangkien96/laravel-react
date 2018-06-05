@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 export default class MenuComponent extends Component {
     render() {
         return (
-            <Router>
                 <nav id = "mainnav-container" >
                     <div id="mainnav">
                         <div id="mainnav-menu-wrap">
@@ -44,9 +43,15 @@ export default class MenuComponent extends Component {
                                         <li className="list-divider" />
                                         <li className="list-header">Quản lí</li>
                                         <li>
-                                            <Link to={'/laravel-react/user'}>
+                                            <Link to={'/laravel-react/users'}>
                                                 <i className="demo-pli-male" />
                                                 <span className="menu-title">Người dùng</span>
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to={'/laravel-react/categories'}>
+                                                <i className="demo-pli-male" />
+                                                <span className="menu-title">Loại sản phẩm</span>
                                             </Link>
                                         </li>
                                     </ul>
@@ -85,9 +90,7 @@ export default class MenuComponent extends Component {
                             </div>
                         </div>
                     </div>
-                </nav >
-     
-            </Router>
+                </nav>
         );
     }
 }

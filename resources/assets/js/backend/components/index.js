@@ -2,19 +2,26 @@ import React, { Component } from "react"
 import MenuComponent from "./Layout/MenuComponent"
 import FooterComponent from "./Layout/FooterComponent"
 import HeaderComponent from "./Layout/HeaderComponent"
+import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import CategoryComponent from "./Content/CategoryComponent"
+import UserComponent from "./Content/UserComponent"
 
 export default () => {
     return (
-        <div id="container" className="effect aside-float aside-bright mainnav-lg">
-            <HeaderComponent/>
-            <div className="boxed">
-                <MenuComponent />
-                <Switch>
-                    <Route exact path='/react-laravel/user' component={UserContainer} />
-                    <Route path='/react-laravel/login' component={LoginComponent} />
-                </Switch>
+        <Router>
+            <div id="container" className="effect aside-float aside-bright mainnav-lg">
+                <HeaderComponent/>
+                <div className="boxed">
+                    <MenuComponent />
+                    <div id="content-container">
+                        <Switch>
+                            <Route exact path='/laravel-react/users' component={UserComponent} />
+                            <Route path='/laravel-react/categories' component={CategoryComponent} />
+                        </Switch>
+                    </div>
+                </div>
+                <FooterComponent/>
             </div>
-            <FooterComponent/>
-        </div>
+        </Router>
     )
 }
