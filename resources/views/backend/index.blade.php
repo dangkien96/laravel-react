@@ -19,7 +19,16 @@
 
     </head>
     <body>
-        <div id="example">
+        <div id="container" class="effect aside-float aside-bright mainnav-lg">
+            @includeif('backend.layouts._header')
+            <div class="boxed">
+                @includeif('backend.layouts._menu')
+                <div id="content-container">
+                    <div id="example">
+                    </div>
+                </div>
+            </div>
+            @includeif('backend.layouts._footer')
         </div>
         <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
         @includeif('backend.layouts._js_default')
