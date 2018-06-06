@@ -1,5 +1,8 @@
+<script src="{{ url('') }}/Nifty/js/jquery.min.js"></script>
+<script src="{{ url('') }}/Nifty/js/bootstrap.min.js"></script>
 <!-- Nifty JS -->
 <script src="{{ url('') }}/Nifty/js/nifty.min.js"></script>
+
 <!-- Nifty select -->
 <script src="{{ url('') }}/Nifty/plugins/bootstrap-select/bootstrap-select.min.js"></script>
 <!-- Nifty Icon -->

@@ -1,3 +1,4 @@
+<link href="{{ url('Nifty/css/bootstrap.min.css') }}" rel="stylesheet">
 <!-- Nifty css -->
 <link href="{{ url('Nifty/css/nifty.min.css') }}" rel="stylesheet">
 <!-- Nifty demo icon css -->

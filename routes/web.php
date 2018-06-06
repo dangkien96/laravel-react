@@ -19,3 +19,17 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/users', "RootControler@index")->name('admin.users');
     Route::get('/categories', "RootControler@index")->name('admin.categories');
 });
+
+Route::group(['prefix' => 'backend/rest'], function() {
+    //user
+
+    Route::get('/user', "Rest\UserCtrl@listUser");
+    Route::get('/user/{id}', "Rest\UserCtrl@getRecordUser");
+    Route::post('/user', "Rest\UserCtrl@insertUser");
+    Route::post('/user/{id}', "Rest\UserCtrl@updateUser");
+    Route::post('/userSelf/{id}', "Rest\UserCtrl@updateUserSelf");
+    Route::delete('/user/{id}', "Rest\UserCtrl@deleteUser");
+});
+// Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');
