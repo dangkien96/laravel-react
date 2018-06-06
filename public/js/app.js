@@ -14042,6 +14042,37 @@ var Symbol = __WEBPACK_IMPORTED_MODULE_0__root_js__["a" /* default */].Symbol;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+<<<<<<< HEAD
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(282);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(284);
+/* unused harmony reexport HashRouter */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(123);
+/* unused harmony reexport Link */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(286);
+/* unused harmony reexport MemoryRouter */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(289);
+/* unused harmony reexport NavLink */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(292);
+/* unused harmony reexport Prompt */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(294);
+/* unused harmony reexport Redirect */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(124);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(68);
+/* unused harmony reexport Router */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(300);
+/* unused harmony reexport StaticRouter */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(302);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_10__Switch__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__matchPath__ = __webpack_require__(304);
+/* unused harmony reexport matchPath */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__withRouter__ = __webpack_require__(305);
+/* unused harmony reexport withRouter */
+
+
+
+=======
 /* harmony export (immutable) */ __webpack_exports__["a"] = asap;
 /* harmony export (immutable) */ __webpack_exports__["c"] = suspend;
 /* harmony export (immutable) */ __webpack_exports__["b"] = flush;
@@ -14054,6 +14085,7 @@ var queue = [];
     triggers flushing the queued tasks.
 **/
 var semaphore = 0;
+>>>>>>> 60b6c3eb3f2b080ab74c6990dc52f1fa0f56f1fe
 
 /**
   Executes a task 'atomically'. Tasks scheduled during this execution will be queued
@@ -59055,7 +59087,26 @@ var createHashHistory = function createHashHistory() {
   return history;
 };
 
+<<<<<<< HEAD
+/* harmony default export */ __webpack_exports__["a"] = (function () {
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["a" /* BrowserRouter */],
+        null,
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "div",
+            null,
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["c" /* Switch */],
+                null,
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */], { exact: true, path: "/laravel-react/admin/users", component: __WEBPACK_IMPORTED_MODULE_3__Content_UserComponent__["a" /* default */] }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */], { exact: true, path: "/laravel-react/admin/categories", component: __WEBPACK_IMPORTED_MODULE_2__Content_CategoryComponent__["a" /* default */] })
+            )
+        )
+    );
+});
+=======
 /* unused harmony default export */ var _unused_webpack_default_export = (createHashHistory);
+>>>>>>> 60b6c3eb3f2b080ab74c6990dc52f1fa0f56f1fe
 
 /***/ }),
 /* 261 */
@@ -62381,7 +62432,11 @@ Link.contextTypes = {
 // Written in this round about way for babel-transform-imports
 
 
+<<<<<<< HEAD
+/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__["a" /* default */]);
+=======
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Route__["a" /* default */]);
+>>>>>>> 60b6c3eb3f2b080ab74c6990dc52f1fa0f56f1fe
 
 /***/ }),
 /* 330 */
@@ -62517,7 +62572,11 @@ BrowserRouter.propTypes = {
 
 exports.__esModule = true;
 
+<<<<<<< HEAD
+/* harmony default export */ __webpack_exports__["a"] = (CategoryComponent);
+=======
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+>>>>>>> 60b6c3eb3f2b080ab74c6990dc52f1fa0f56f1fe
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
