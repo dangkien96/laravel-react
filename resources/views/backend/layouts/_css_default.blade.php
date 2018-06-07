@@ -22,3 +22,4 @@
 
 <link href="{{ url('Nifty/plugins/spinkit/css/spinkit.min.css') }}" rel="stylesheet">
 <link href="{{ url('Nifty/plugins/themify-icons/themify-icons.min.css') }}" rel="stylesheet">
+<link href="{{ url('css/plugin/validateFormik.css') }}" rel="stylesheet">

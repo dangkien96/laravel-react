@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { connect } from 'react-redux'
 import { LoginActions }  from '../../actions/LoginAction'
 import LoginService from "../../services/LoginService"
-import Form from "react-validation/build/form";
+import { withFormik } from "formik";
 
 export class LoginComponent extends Component {
 
@@ -28,15 +28,18 @@ export class LoginComponent extends Component {
 
     componentWillReceiveProps(nextProps){
         if (nextProps.dataLogin.errors) {
+            console.log(nextProps.dataLogin.errors)
         }
     }
 
-    errorsMap (errors) {
-        errors.map((error, key)  => {
-            console.log(error)
+    errorsMap (error) {
+        error.map =  (key , value) => {
+            return (
+                <p className="text-danger"> 
+                    { value }
+                </p>
+            )
         }
-        
-      )
     }
 
     render() {
@@ -52,9 +55,7 @@ export class LoginComponent extends Component {
                             <div className="form-group">
                                 <input type="text" className="form-control" name="email" autoFocus
                                  placeholder="Email" value={this.state.email}  onChange={ (e) => this.handeChange(e) } />
-                                { 
-                                    this.props.dataLogin.errors ? this.errorsMap(this.props.dataLogin.errors) : ""
-                                }
+                            { this.errorsMap (nextProps.dataLogin.errors.name) }
                             </div>
                             <div className="form-group">
                                 <input type="password" className="form-control" name="password"
