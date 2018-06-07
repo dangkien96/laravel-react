@@ -14,7 +14,6 @@
                 'csrfToken' => csrf_token(),
             ]) !!};
         </script>
-
     </head>
     <body>
         <div id="container" class="cls-container">

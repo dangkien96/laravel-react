@@ -28,18 +28,15 @@ export class LoginComponent extends Component {
 
     componentWillReceiveProps(nextProps){
         if (nextProps.dataLogin.errors) {
-            console.log(nextProps.dataLogin.errors)
         }
     }
 
-    errorsMap (error) {
-        error.map =  (key , value) => {
-            return (
-                <p className="text-danger"> 
-                    { value }
-                </p>
-            )
+    errorsMap (errors) {
+        errors.map((error, key)  => {
+            console.log(error)
         }
+        
+      )
     }
 
     render() {
@@ -55,7 +52,9 @@ export class LoginComponent extends Component {
                             <div className="form-group">
                                 <input type="text" className="form-control" name="email" autoFocus
                                  placeholder="Email" value={this.state.email}  onChange={ (e) => this.handeChange(e) } />
-                            { this.errorsMap (nextProps.dataLogin.errors.name) }
+                                { 
+                                    this.props.dataLogin.errors ? this.errorsMap(this.props.dataLogin.errors) : ""
+                                }
                             </div>
                             <div className="form-group">
                                 <input type="password" className="form-control" name="password"

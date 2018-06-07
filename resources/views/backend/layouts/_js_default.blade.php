@@ -1,5 +1,3 @@
-<script src="{{ url('') }}/Nifty/js/jquery.min.js"></script>
-<script src="{{ url('') }}/Nifty/js/bootstrap.min.js"></script>
 <!-- Nifty JS -->
 <script src="{{ url('') }}/Nifty/js/nifty.min.js"></script>
 
