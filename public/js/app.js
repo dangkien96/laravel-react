@@ -62760,6 +62760,7 @@ if (hadRuntime) {
       }
     }
 
+<<<<<<< HEAD
     // Return an iterator with no values.
     return { next: doneResult };
   }
@@ -62768,6 +62769,129 @@ if (hadRuntime) {
   function doneResult() {
     return { value: undefined, done: true };
   }
+=======
+    _createClass(LoginComponent, [{
+        key: 'handeChange',
+        value: function handeChange(e) {
+            this.setState(_defineProperty({}, e.target.name, e.target.value));
+        }
+    }, {
+        key: 'todoLogin',
+        value: function todoLogin() {
+            var params = __WEBPACK_IMPORTED_MODULE_4__services_LoginService__["a" /* default */].params.Login(this.state.email, this.state.password);
+            this.props.todoLogin(params);
+        }
+    }, {
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(nextProps) {
+            if (nextProps.dataLogin.errors) {}
+        }
+    }, {
+        key: 'errorsMap',
+        value: function errorsMap(errors, name) {
+            if (errors) {
+                return Object.keys(errors).map(function (key) {
+                    if (key == name) {
+                        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'p',
+                            { key: key, className: 'text-left text-danger mt-1' },
+                            ' ',
+                            errors[key],
+                            ' '
+                        );
+                    }
+                });
+            }
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                null,
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'cls-content-sm panel' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'panel-body', style: { background: '#fff' } },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'mar-ver pad-btm' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'h1',
+                                { className: 'h3' },
+                                '\u0110\u0103ng nh\u1EADp trang qu\u1EA3n tr\u1ECB'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'p',
+                                null,
+                                '\u0110\u0103ng nh\u1EADp b\u1EB1ng t\xE0i kho\u1EA3n'
+                            )
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'form',
+                            null,
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'form-group' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'text', className: 'form-control', name: 'email', autoFocus: true,
+                                    placeholder: 'Email', value: this.state.email, onChange: function onChange(e) {
+                                        return _this2.handeChange(e);
+                                    } }),
+                                this.errorsMap(this.props.dataLogin.errors, "email")
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'form-group' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'password', className: 'form-control', name: 'password',
+                                    placeholder: 'M\u1EADt kh\u1EA9u', value: this.state.password, onChange: function onChange(e) {
+                                        return _this2.handeChange(e);
+                                    } }),
+                                this.errorsMap(this.props.dataLogin.errors, "password")
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { className: 'checkbox pad-btm text-left' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { id: 'demo-form-checkbox', className: 'magic-checkbox', type: 'checkbox' }),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'label',
+                                    { htmlFor: 'demo-form-checkbox' },
+                                    'Nh\u1EDB \u0111\u0103ng nh\u1EADp'
+                                )
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'button',
+                                { className: 'btn btn-primary btn-lg btn-block',
+                                    onClick: function onClick() {
+                                        return _this2.todoLogin();
+                                    },
+                                    type: 'button' },
+                                '\u0110\u0103ng nh\u1EADp'
+                            )
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'pad-all', style: { background: '#fff' } },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'a',
+                            { href: 'pages-password-reminder.html', className: 'btn-link mar-rgt' },
+                            'L\u1EA5y l\u1EA1i m\u1EADt kh\u1EA9u?'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'div',
+                            { className: 'media pad-top bord-top' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'float-right' })
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+>>>>>>> 05813e1a6a96cf995b9e77bbb192971234d75bd5
 
   Context.prototype = {
     constructor: Context,
