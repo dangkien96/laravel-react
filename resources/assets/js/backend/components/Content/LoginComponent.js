@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { connect } from 'react-redux'
 import { LoginActions }  from '../../actions/LoginAction'
 import LoginService from "../../services/LoginService"
+import Form from "react-validation/build/form";
 
 export class LoginComponent extends Component {
 
