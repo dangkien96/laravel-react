@@ -56,11 +56,7 @@ export class LoginComponent extends Component {
                             <div className="form-group">
                                 <input type="text" className="form-control" name="email" autoFocus
                                  placeholder="Email" value={this.state.email}  onChange={ (e) => this.handeChange(e) } />
-<<<<<<< HEAD
-                            { this.errorsMap (nextProps.dataLogin.errors.name) }
-=======
                                 { this.errorsMap(this.props.dataLogin.errors, "email")}
->>>>>>> 05813e1a6a96cf995b9e77bbb192971234d75bd5
                             </div>
                             <div className="form-group">
                                 <input type="password" className="form-control" name="password"
