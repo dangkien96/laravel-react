@@ -62654,10 +62654,20 @@ var LoginComponent = function (_Component) {
         }
     }, {
         key: 'errorsMap',
-        value: function errorsMap(errors) {
-            errors.map(function (error, key) {
-                console.log(error);
-            });
+        value: function errorsMap(errors, name) {
+            if (errors) {
+                return Object.keys(errors).map(function (key) {
+                    if (key == name) {
+                        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'p',
+                            { key: key, className: 'text-left text-danger mt-1' },
+                            ' ',
+                            errors[key],
+                            ' '
+                        );
+                    }
+                });
+            }
         }
     }, {
         key: 'render',
@@ -62697,7 +62707,7 @@ var LoginComponent = function (_Component) {
                                     placeholder: 'Email', value: this.state.email, onChange: function onChange(e) {
                                         return _this2.handeChange(e);
                                     } }),
-                                this.props.dataLogin.errors ? this.errorsMap(this.props.dataLogin.errors) : ""
+                                this.errorsMap(this.props.dataLogin.errors, "email")
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'div',
@@ -62705,7 +62715,8 @@ var LoginComponent = function (_Component) {
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'password', className: 'form-control', name: 'password',
                                     placeholder: 'M\u1EADt kh\u1EA9u', value: this.state.password, onChange: function onChange(e) {
                                         return _this2.handeChange(e);
-                                    } })
+                                    } }),
+                                this.errorsMap(this.props.dataLogin.errors, "password")
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'div',

@@ -27,7 +27,7 @@ class LoginCtrl extends Controller
     	$validator = Validator::make($request->all(), $rules, $messages);
 
     	if ($validator->fails()) {
-            return response()->json([$validator->errors()], 422);
+            return response()->json($validator->errors(), 422);
         }
         $email    = $request->email;
         $password = $request->password;
