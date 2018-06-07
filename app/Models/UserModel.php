@@ -15,8 +15,8 @@ class UserModel extends MyModel
         {
             $this->setFunctionCond('where', [function($query) use ($freeText){
                 $query->orwhere('name', 'like', "%$freeText%")
-                      ->orWhere('email', 'like', "%$freeText%");                        
-                      ->orWhere('phone', 'like', "%$freeText%");                        
+                      ->orWhere('email', 'like', "%$freeText%")                        
+                      ->orWhere('phone', 'like', "%$freeText%")                        
                       ->orWhere('account', 'like', "%$freeText%");                       
             }]);
         }
