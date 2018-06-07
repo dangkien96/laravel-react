@@ -62650,20 +62650,14 @@ var LoginComponent = function (_Component) {
     }, {
         key: 'componentWillReceiveProps',
         value: function componentWillReceiveProps(nextProps) {
-            if (nextProps.dataLogin.errors) {
-                console.log(nextProps.dataLogin.errors);
-            }
+            if (nextProps.dataLogin.errors) {}
         }
     }, {
         key: 'errorsMap',
-        value: function errorsMap(error) {
-            error.map = function (key, value) {
-                return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'p',
-                    { className: 'text-danger' },
-                    value
-                );
-            };
+        value: function errorsMap(errors) {
+            errors.map(function (error, key) {
+                console.log(error);
+            });
         }
     }, {
         key: 'render',
@@ -62703,7 +62697,7 @@ var LoginComponent = function (_Component) {
                                     placeholder: 'Email', value: this.state.email, onChange: function onChange(e) {
                                         return _this2.handeChange(e);
                                     } }),
-                                this.errorsMap(nextProps.dataLogin.errors.name)
+                                this.props.dataLogin.errors ? this.errorsMap(this.props.dataLogin.errors) : ""
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'div',
@@ -63098,7 +63092,9 @@ var initialState = {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__actions_LoginAction__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__configs_url__ = __webpack_require__(130);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 
 
 
@@ -63112,8 +63108,10 @@ var initialState = {
 
     switch (action.type) {
         case __WEBPACK_IMPORTED_MODULE_0__actions_LoginAction__["b" /* TypeLoginAction */].LOGIN_ACTION_COMPLETE:
+            if (action.data.status) {
+                window.location.href = __WEBPACK_IMPORTED_MODULE_1__configs_url__["a" /* default */].REST_LOGIN;
+            }
             return _extends({}, state, { stateLogin: action.data });
-
         case "Logout":
         default:
             return state;
